@@ -1,0 +1,49 @@
+# Build results
+bin/
+obj/
+*.dll
+*.exe
+*.o
+*.so
+
+# Visual Studio cache/options
+.vs/
+.vscode/
+
+# Visual Studio files
+*.csproj.user
+*.sln.DotSettings
+*.sln.DotSettings.user
+*.user
+*.suo
+
+# Rider IDE
+.idea/
+.idea_modules/
+*.sln.iml
+
+# ReSharper
+.resharper
+.resharper.user
+*.resharper
+*.resharper.user
+
+# Local user-specific files
+launchSettings.json
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Environment variables
+.env
+.env.local
+
+# NuGet
+packages/
+.nuget/
+nuget.config
+
+# Logs
+*.log
