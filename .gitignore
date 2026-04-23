@@ -1,14 +1,22 @@
 # Build results
 bin/
 obj/
+dist/
 *.dll
 *.exe
 *.o
 *.so
+*.nupkg
+*.snupkg
 
 # Visual Studio cache/options
 .vs/
 .vscode/
+.vscode-test/
+
+# Visual Studio Code
+settings.json
+launch.json
 
 # Visual Studio files
 *.csproj.user
@@ -16,34 +24,80 @@ obj/
 *.sln.DotSettings.user
 *.user
 *.suo
+*.solutioncache
+*.VC.db
+*.VC.VC.opendb
 
 # Rider IDE
 .idea/
 .idea_modules/
 *.sln.iml
+*.iml
 
 # ReSharper
 .resharper
 .resharper.user
 *.resharper
 *.resharper.user
+_ReSharper*/
+*.DotSettings.user
+
+# Test Results
+TestResults/
+*.trx
+*.coverage
+OpenCover/
 
 # Local user-specific files
 launchSettings.json
+appsettings.local.json
+appsettings.*.local.json
 
 # macOS
 .DS_Store
 .AppleDouble
 .LSOverride
+*.swp
+*.swo
+*~
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Windows
+Thumbs.db
+*.lnk
+
+# Linux
+.directory
 
 # Environment variables
 .env
 .env.local
+.env.*.local
 
 # NuGet
 packages/
 .nuget/
 nuget.config
+*.nuget.props
+*.nuget.targets
 
 # Logs
+logs/
 *.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# System files
+.grunt
+.cache
+.wafpickle-*
+.node_repl_history
+
+# Build system
+!.gitignore

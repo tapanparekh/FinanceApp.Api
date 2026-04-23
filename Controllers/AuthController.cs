@@ -17,12 +17,6 @@ public class AuthController:ControllerBase
         _configuration = configuration;
     }
 
-    [HttpGet("test")]
-    public IActionResult Test()
-    {
-        return Ok("Test endpoint is working.");
-    }
-
     [HttpPost("register")]
     public async Task<IActionResult>Register(RegisterDto register)
     {

@@ -6,6 +6,18 @@ using System.Text;
 var builder = WebApplication.CreateBuilder(args);
 var jwtSettings = builder.Configuration.GetSection("Jwt");
 var key = Encoding.UTF8.GetBytes(jwtSettings["Key"]);
+
+// 🔸 Add CORS
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowFrontend", policy =>
+    {
+        policy.WithOrigins("http://localhost:5173")
+              .AllowAnyMethod()
+              .AllowAnyHeader();
+    });
+});
+
 // 🔹 Add Controllers
 builder.Services.AddControllers();
 
@@ -44,6 +56,9 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+// 🔸 Use CORS
+app.UseCors("AllowFrontend");
 
 app.UseAuthentication();   // ✅ must come BEFORE authorization
 app.UseAuthorization();
